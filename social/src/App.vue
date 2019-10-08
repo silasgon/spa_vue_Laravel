@@ -5,9 +5,37 @@
     </header>
 
     <main>
-      <container>
-        <router-view />
-      </container>
+      <div class="container">
+        <div class="row">
+          <grid-vue tamamho="4" class="col s4">
+
+            <card-menu-vue>
+              <div class="row valign-wrapper">
+                <grid-vue tamamho="4" class="col s4">
+                  <img
+                    src="https://materializecss.com/images/yuna.jpg"  alt class="circle responsive-img"
+                  />
+                  <!-- notice the "circle" class -->
+                </grid-vue>
+                <grid-vue tamamho="8" class="col s8">
+                  <span
+                    class="black-text"
+                  > 
+                  <h5>Maria</h5>
+                    Add the "circle" class to it to make it appear circular.</span>
+                </grid-vue>
+              </div>
+            </card-menu-vue>
+            <card-menu-vue>
+              <h3>Teste</h3>
+            </card-menu-vue>
+            
+          </grid-vue>
+          <grid-vue tamamho="8" class="col s8">
+            <router-view />
+          </grid-vue>
+        </div>
+      </div>
     </main>
 
     <footer-vue cor="green darken-1" logo="Social" descricao="Teste de descrição" ano="2019">
@@ -30,12 +58,17 @@
 <script>
 import NavBar from "@/components/layouts/NavBar";
 import FooterVue from "@/components/layouts/FooterVue";
+import GridVue from "@/components/layouts/GridVue";
+import CardMenuVue from "@/components/layouts/CardMenuVue";
+
 
 export default {
   name: "App",
   components: {
     NavBar,
-    FooterVue
+    FooterVue,
+    GridVue,
+    CardMenuVue
   }
 };
 </script>
