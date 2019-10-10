@@ -7,17 +7,17 @@
     <main>
       <div class="container">
         <div class="row">
-          <grid-vue tamamho="4" class="col s4">
+          <grid-vue tamanho="4">
 
             <card-menu-vue>
               <div class="row valign-wrapper">
-                <grid-vue tamamho="4" class="col s4">
+                <grid-vue tamanho="4">
                   <img
                     src="https://materializecss.com/images/yuna.jpg"  alt class="circle responsive-img"
                   />
                   <!-- notice the "circle" class -->
                 </grid-vue>
-                <grid-vue tamamho="8" class="col s8">
+                <grid-vue tamanho="8">
                   <span
                     class="black-text"
                   > 
@@ -31,7 +31,7 @@
             </card-menu-vue>
             
           </grid-vue>
-          <grid-vue tamamho="8" class="col s8">
+          <grid-vue tamanho="8">
             <router-view />
           </grid-vue>
         </div>

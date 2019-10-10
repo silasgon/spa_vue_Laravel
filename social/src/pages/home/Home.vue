@@ -1,22 +1,27 @@
 <template>
-  <card-conteudo-vue
-    perfil="https://materializecss.com/images/yuna.jpg"
-    nome="Maria Silva"
-    data="08/10/2019 17:10">
+  <span>
+    
+    <publicar-conteudo-vue />
 
-    <card-detalhe-vue img="http://archives.materializecss.com/0.100.2/images/sample-1.jpg"
-    titulo=""
-    txt="I am a very simple card. I am good at containing small bits of information.
+    <card-conteudo-vue
+      perfil="https://materializecss.com/images/yuna.jpg"
+      nome="Maria Silva"
+      data="08/10/2019 17:10"
+    >
+      <card-detalhe-vue
+        img="http://archives.materializecss.com/0.100.2/images/sample-1.jpg"
+        titulo
+        txt="I am a very simple card. I am good at containing small bits of information.
               I am convenient because I require little markup to use effectively"
-    />
-      
-
-  </card-conteudo-vue>
+      />
+    </card-conteudo-vue>
+  </span>
 </template>
 
 <script>
 import CardConteudoVue from "@/components/social/CardconteudoVue";
 import CardDetalheVue from "@/components/social/CardDetalheVue";
+import PublicarConteudoVue from "@/components/social/PublicarConteudoVue";
 
 export default {
   name: "Home",
@@ -25,7 +30,8 @@ export default {
   },
   components: {
     CardConteudoVue,
-    CardDetalheVue
+    CardDetalheVue,
+    PublicarConteudoVue
   }
 };
 </script>
