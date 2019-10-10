@@ -2,11 +2,11 @@
  
   <div class="row">
     <grid-vue tamanho="12" class="input-field">
-      <textarea id="textarea1" class="materialize-textarea"></textarea>
-      <label for="textarea1">O que está acontecendo?</label>
+      <textarea v-model="conteudo" class="materialize-textarea"></textarea>
+      <label>O que está acontecendo?</label>
     </grid-vue>
     <p>
-      <grid-vue tamanho="2 offset-s10" class="btn waves-effect waves-ligth">Publicar</grid-vue>
+      <grid-vue v-if="conteudo" class="btn waves-effect waves-ligth" tamanho="2 offset-s10">Publicar</grid-vue>
     </p>
   </div>
   
@@ -20,6 +20,7 @@ export default {
   props: [],
   data() {
     return {
+      conteudo:''
 
     }
   },
