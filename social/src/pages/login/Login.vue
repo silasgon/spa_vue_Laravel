@@ -1,11 +1,16 @@
 <template>
   <login-template>
-    <h2>Login</h2>
+    <span slot="menuesquerdo">
+      <img src="https://www.wsitebrasil.com.br/sig/www/openged/blog/34/000034_5ad4ef1093728_redessociaislogicadigital.jpg" class="responsive-img">
+    </span>
 
-    <input type="text" placeholder="E-mail" value="" />
-    <input type="text" placeholder="E-mail" value="" />
-    <button type="button" class="btn">Entrar</button>
+    <span slot="principal">
+      <h2>Login</h2>
 
+      <input type="text" placeholder="E-mail" value />
+      <input type="text" placeholder="E-mail" value />
+      <button type="button" class="btn">Entrar</button>
+    </span>
   </login-template>
 </template>
 
