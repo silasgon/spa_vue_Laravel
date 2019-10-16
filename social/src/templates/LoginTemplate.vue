@@ -1,7 +1,14 @@
  <template>
   <span>
     <header>
-      <nav-bar logo="Social" url="#" cor="green darken-1" />
+      <nav-bar logo="Social" url="/" cor="green darken-1">
+        <li>
+          <router-link to="/">Home</router-link>
+        </li>
+        <li>
+          <router-link to="/login">Entrar</router-link>
+        </li>
+      </nav-bar>
     </header>
 
     <main>
@@ -9,7 +16,7 @@
         <div class="row">
           <grid-vue tamanho="8">
             <card-menu-vue>
-            <slot name="menuesquerdo" />
+              <slot name="menuesquerdo" />
             </card-menu-vue>
           </grid-vue>
           <grid-vue tamanho="4">
