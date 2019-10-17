@@ -54,3 +54,6 @@ $php artisan serve
 criar rotas de cadastro e de login e depois testar o acesso com token.
 
 Baixar o Postman:
+https://www.getpostman.com/downloads/
+
+ 
