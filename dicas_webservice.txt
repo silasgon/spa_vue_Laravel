@@ -1,0 +1,56 @@
+Criar a pasta Vendor do Código Fonte do webservice:
+Rodar o comando dentro da pasta webservice
+
+$composer update
+
+--------------------------------------------------------------------------
+Api com Laravel 5.5:
+instalar o Laravel
+
+$composer create-project --prefer-dist laravel/laravel webservice "5.5.*"
+
+--------------------------------------------------------------------------
+Instalar o laravel/passport para login.
+Se der erro de instalação pode ser que seja possível a instalação do 
+paragonie/random_compat
+para isso execute:
+
+$composer require paragonie/random_compat:2.*
+
+e depois instalar o passport
+
+$composer require laravel/passport "4.0.*"
+
+--------------------------------------------------------------------------
+configurar o banco de dados ...
+
+$php artisan migrate
+
+instalar o passport
+
+$php artisan passport:install
+
+--------------------------------------------------------------------------
+colocar no User:
+importar para o arquivo User.php dentro do app a linha
+
+# use Laravel\Passport\HasApiTokens;
+# use HasApiTokens, Notifiable;
+
+e o config /auth
+
+'api' => [
+    'driver' => 'passport',
+    'provider' => 'users'
+],
+
+pronto...
+-------------------------------------------------------------------------
+rodar o servidor local do PHP:
+
+$php artisan serve
+
+--------------------------------------------------------------------------
+criar rotas de cadastro e de login e depois testar o acesso com token.
+
+Baixar o Postman:
