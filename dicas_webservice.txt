@@ -56,4 +56,28 @@ criar rotas de cadastro e de login e depois testar o acesso com token.
 Baixar o Postman:
 https://www.getpostman.com/downloads/
 
- 
+
+Integrando a API laravel com o front Vuejs
+
+Axios:
+
+$npm install axios --save
+
+colocar na pag.
+import axios from 'axios';
+
+Exemplo:
+  postPost() {
+    axios.post(`url da api`, {
+      body: this.postBody
+    })
+    .then(response => {})
+    .catch(e => {
+      this.errors.push(e)
+    })
+
+
+------------------------------------------------------------
+Pode ser necessario a instalação de uma extensão para execução da api junto ao fronte
+Erro de Allow-Control-Allow-Origin
+https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc
