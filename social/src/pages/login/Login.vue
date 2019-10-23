@@ -43,10 +43,28 @@ export default {
           password: this.password
         })
         .then(response => {
-          console.log(response);
+          console.log(response)
+          if (response.data.token) {
+            //login com sucesso
+            console.log('login com sucesso')    
+          }else if (response.data.status == false) {
+            //login não existe
+            console.log('login não existe')
+            alert('Login inválido!');
+          }else{
+            console.log('erros de validação')
+
+            let erros = '';
+
+            for(let erro of Object.values(response.data)){
+              erros += erro +" ";
+            }
+            alert(erros);
+          }
         })
-        .catch(e => {
-          console.log(e);
+        .catch(e => { 
+          console.log(e)
+          alert("Erro! Tente novamente mais tarde.")
         });
     }
   }

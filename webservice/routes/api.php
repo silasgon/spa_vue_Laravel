@@ -16,9 +16,6 @@ use Illuminate\Support\Facades\Validator;
 |
 */
 
-Route::get('/teste', function(Request $request){
-    return "ok";
-});
 Route::post('/cadastro', function(Request $request){
     $data = $request->all();
 
@@ -47,7 +44,7 @@ Route::post('/login', function(Request $request){
 
     $validacao = Validator::make($data, [
         'email' => 'required|string|email|max:255',
-        'password' => 'required|string',
+        'password' => 'required|string|min:6',
     ]);
         
     if($validacao->fails()){
