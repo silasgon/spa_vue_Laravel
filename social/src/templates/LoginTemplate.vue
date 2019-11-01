@@ -2,9 +2,6 @@
   <span>
     <header>
       <nav-bar logo="Social" url="/" cor="green darken-1">
-        <li>
-          <router-link to="/">Home</router-link>
-        </li>
         <li v-if="!usuario">
           <router-link to="/login">Entrar</router-link>
         </li>
@@ -76,6 +73,7 @@ export default {
     let usuarioAux = sessionStorage.getItem("usuario");
     if (usuarioAux) {
       this.usuario = JSON.parse(usuarioAux);
+      this.$router.push('/')
     }
   },
   methods:{
